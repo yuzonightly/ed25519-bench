@@ -1,11 +1,7 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(Ed25519Benchmarks VERSION 0.1.0)
+cmake_minimum_required( VERSION 3.16 )
 
-include(CTest)
-enable_testing()
+project( Ed25519Benchmarks VERSION 0.1.0 )
 
-add_executable(Ed25519Benchmarks main.cpp)
-
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
+add_subdirectory( benchmark )
+add_subdirectory( src )
+# find_package(CryptoPP REQUIRED)
