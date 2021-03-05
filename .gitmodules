@@ -1,3 +1,3 @@
-[submodule "ed25519-donna/ed25519-donna"]
-	path = ed25519-donna/ed25519-donna
+[submodule "rust-sea/ed25519-donna"]
+	path = rust-sea/ed25519-donna
 	url = https://github.com/floodyberry/ed25519-donna
