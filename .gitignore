@@ -1,4 +1,15 @@
-Python/env
 __pycache__
-target/
+env
 .vscode
+target/
+**/*.rs.bk
+Cargo.lock
+
+*~
+\#*
+.\#*
+*.swp
+*.orig
+*.bak
+
+rust-sea/ed25519-donna/*.o

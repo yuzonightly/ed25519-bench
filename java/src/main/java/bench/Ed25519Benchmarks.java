@@ -17,10 +17,10 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 public class Ed25519Benchmarks {
   public static void main(String[] args) throws RunnerException {
-    // Options opt = new
-    // OptionsBuilder().include(BouncyCastleBench.class.getSimpleName()).forks(1).build();
-    // new Runner(opt).run();
-    Options opt = new OptionsBuilder().include(Str4dBench.class.getSimpleName()).forks(1).build();
-    new Runner(opt).run();
+    Options optBouncy = new
+    OptionsBuilder().include(BouncyCastleBench.class.getSimpleName()).forks(1).build();
+    new Runner(optBouncy).run();
+    Options optStr4d = new OptionsBuilder().include(Str4dBench.class.getSimpleName()).forks(1).build();
+    new Runner(optStr4d).run();
   }
 }
