@@ -14,6 +14,7 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 // Do not assume the numbers tell you what you want them to tell.
 
 // Benchmarks + Theory Chapter + Documentation + Finish Code.
+// Define no_std for compat
 
 public class Ed25519Benchmarks {
   public static void main(String[] args) throws RunnerException {

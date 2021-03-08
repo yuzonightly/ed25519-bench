@@ -1,5 +1,5 @@
 extern crate criterion;
-extern crate ed25519_rust;
+extern crate ed25519_fun;
 
 use ed25519_fun::{Keypair, Signature};
 
@@ -7,7 +7,7 @@ use criterion::{criterion_group, criterion_main, Criterion};
 
 fn keypair_generation(c: &mut Criterion) {
     c.bench_function("ed25519-fun key generation", move |b| {
-        b.iter(|| Keypair::generate_keypair())
+        b.iter(|| Keypair::generate())
     });
 }
 

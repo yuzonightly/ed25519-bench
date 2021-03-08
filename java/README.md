@@ -4,11 +4,11 @@ Ed25519 benchmarks in Java.
 
 ## Built With
 
-- `JMH`.
+- `JMH`
 
 ## Run Benchmarks
 
 ```console
-yuzo@earth:~/Java$ mvn package
-yuzo@earth:~/Java$ java -jar target/ed25519-benchmarks-0.1.0.jar
+yuzo@earth:~/java$ mvn package
+yuzo@earth:~/java$ java -jar target/ed25519-benchmarks-0.1.0.jar
 ```
