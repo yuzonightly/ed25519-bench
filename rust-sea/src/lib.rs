@@ -5,12 +5,11 @@ extern crate libc;
 // #[cfg(all(test, feature = "bench"))]
 extern crate criterion;
 
-// #[cfg(all(test, feature = "bench"))]
-pub mod ffi;
+pub mod donna_ffi;
+pub mod orlp_ffi;
 
 // #[cfg(all(test, feature = "bench"))]
 // mod bench;
 
-pub use crate::ffi::*;
-
-// | tee bench_results
+pub use crate::donna_ffi::*;
+pub use crate::orlp_ffi::*;

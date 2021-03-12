@@ -4,11 +4,11 @@
 extern crate criterion;
 extern crate rust_sea;
 
-use rust_sea::ffi;
+use rust_sea::donna_ffi;
 
-use ffi::ed25519_donna_public_key;
-use ffi::ed25519_donna_sign;
-use ffi::ed25519_donna_sign_open;
+use donna_ffi::ed25519_donna_public_key;
+use donna_ffi::ed25519_donna_sign;
+use donna_ffi::ed25519_donna_sign_open;
 
 use criterion::{criterion_group, criterion_main, Criterion};
 

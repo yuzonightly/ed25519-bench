@@ -4,3 +4,6 @@ url = https://github.com/orlp/ed25519
 [submodule "rust-sea/ed25519-donna"]
 path = rust-sea/ed25519-donna
 url = https://github.com/floodyberry/ed25519-donna
+[submodule "c/ed25519"]
+path = c/ed25519
+url = https://github.com/orlp/ed25519

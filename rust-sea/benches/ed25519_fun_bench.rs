@@ -31,11 +31,11 @@ fn signature_verification(c: &mut Criterion) {
 }
 
 criterion_group! {
-    name = ed25519_rust_bench;
+    name = ed25519_fun_bench;
     config = Criterion::default();
     targets = keypair_generation,
               signature_generation,
               signature_verification
 }
 
-criterion_main!(ed25519_rust_bench);
+criterion_main!(ed25519_fun_bench);

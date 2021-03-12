@@ -15,14 +15,17 @@ fn main() {
         .flag("-lcrypto")
         .compile("libed25519donna.a");
 
-    cc::Build::new()
-        .file("ed25519-donna/ed25519.c")
-        .define("ED25519_SSE2", None)
-        .include("/usr/include/openssl")
-        .include("/usr/include")
-        .include("ed25519-donna")
-        .define("ED25519_REFHASH", None)
-        .flag("-lssl")
-        .flag("-lcrypto")
-        .compile("libed25519donna.a");
+    // cc::Build::new()
+    //     .file("ed25519/src/seed.c")
+    //     .file("ed25519/src/keypair.c")
+    //     .file("ed25519/src/sign.c")
+    //     .file("ed25519/src/verify.c")
+    //     .file("ed25519/src/add_scalar.c")
+    //     .file("ed25519/src/fe.c")
+    //     .file("ed25519/src/ge.c")
+    //     .file("ed25519/src/key_exchange.c")
+    //     .file("ed25519/src/sc.c")
+    //     .file("ed25519/src/sha512.c")
+    //     .include("ed25519/src")
+    //     .compile("libed25519orlp.a");
 }
