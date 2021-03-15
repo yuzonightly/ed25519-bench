@@ -1,6 +1,6 @@
 # Ed25519 Benchmarks
 
-Ed25519 benchmarks using Rust's FFI, considering that the overhead introduced is neglidible.
+Ed25519 benchmarks using Rust's FFI, considering that the overhead introduced is negligible.
 
 Benchmarked libraries:
 

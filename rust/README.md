@@ -8,8 +8,6 @@ Benchmarked libraries:
 
 ## Built With
 
-- `cc`
-- `libc`
 - `criterion`
 
 ## Run Benchmarks

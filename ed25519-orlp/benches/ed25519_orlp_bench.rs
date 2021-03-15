@@ -9,12 +9,10 @@ extern crate itertools;
 use ed25519_orlp::orlp_ffi;
 
 use orlp_ffi::ed25519_orlp_keypair;
-// use orlp_ffi::ed25519_donna_sign;
-// use orlp_ffi::ed25519_donna_sign_open;
+use orlp_ffi::ed25519_orlp_sign;
+use orlp_ffi::ed25519_orlp_verify;
 
 use criterion::{criterion_group, criterion_main, Criterion};
-
-use itertools::Itertools;
 
 const MESSAGE: &'static str = "This is a test of the tsunumi alert system. This is just a test.";
 
@@ -37,42 +35,40 @@ fn bench_ed25519_orlp_keypair(c: &mut Criterion) {
     let mut seed = [0u8; 32];
     seed.copy_from_slice(&seed_hex);
 
-    c.bench_function("Ed25519-orlp kaypair", move |b| {
+    c.bench_function("ed25519-orlp key generation", move |b| {
         b.iter(|| ed25519_orlp_keypair(&mut public_key, &mut secret_key, &seed));
     });
 }
 
-// fn bench_ed25519_donna_sign(c: &mut Criterion) {
-//     c.bench_function("Ed25519-donna sign", move |b| {
-//         b.iter(|| {
-//             ed25519_donna_sign(
-//                 &MESSAGE.as_bytes(),
-//                 &ED25519_SECRET_KEY_BYTES,
-//                 &ED25519_PUBLIC_KEY_BYTES,
-//             )
-//         });
-//     });
-// }
+fn bench_ed25519_orlp_sign(c: &mut Criterion) {
+    c.bench_function("ed25519-orlp signature generation", move |b| {
+        b.iter(|| {
+            ed25519_orlp_sign(
+                &MESSAGE.as_bytes(),
+                &ED25519_SECRET_KEY_BYTES,
+                &ED25519_PUBLIC_KEY_BYTES,
+            )
+        });
+    });
+}
 
-// fn bench_ed25519_donna_sign_open(c: &mut Criterion) {
-//     let signature: [u8; 64] = ed25519_donna_sign(
-//         &MESSAGE.as_bytes(),
-//         &ED25519_SECRET_KEY_BYTES,
-//         &ED25519_PUBLIC_KEY_BYTES,
-//     );
-//     c.bench_function("Ed25519-donna verify", move |b| {
-//         b.iter(|| {
-//             ed25519_donna_sign_open(&MESSAGE.as_bytes(), &ED25519_PUBLIC_KEY_BYTES, &signature)
-//         });
-//     });
-// }
+fn bench_ed25519_orlp_sign_open(c: &mut Criterion) {
+    let signature: [u8; 64] = ed25519_orlp_sign(
+        &MESSAGE.as_bytes(),
+        &ED25519_SECRET_KEY_BYTES,
+        &ED25519_PUBLIC_KEY_BYTES,
+    );
+    c.bench_function("ed25519-orlp signature verification", move |b| {
+        b.iter(|| ed25519_orlp_verify(&MESSAGE.as_bytes(), &ED25519_PUBLIC_KEY_BYTES, &signature));
+    });
+}
 
 criterion_group! {
     name = ed25519_orlp_bench;
     config = Criterion::default();
     targets = bench_ed25519_orlp_keypair,
-    // bench_ed25519_donna_sign,
-    // bench_ed25519_donna_sign_open,
+    bench_ed25519_orlp_sign,
+    bench_ed25519_orlp_sign_open,
 }
 
 criterion_main!(ed25519_orlp_bench);
