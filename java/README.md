@@ -2,9 +2,14 @@
 
 Ed25519 benchmarks in Java.
 
+Benchmarked libraries:
+
+- Bouncy Castle library.
+- `str4d/ed25519-java`.
+
 ## Built With
 
-- `JMH`
+- `JMH`.
 
 ## Run Benchmarks
 

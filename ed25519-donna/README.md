@@ -2,9 +2,12 @@
 
 Ed25519 benchmarks using Rust's FFI, considering that the overhead introduced is neglidible.
 
+Benchmarked libraries:
+
+- `floodyberry/ed25519-donna`.
+
 ## Built With
 
-- `floodyberry/ed25519-donna` repository.
 - `cc`
 - `libc`
 - `criterion`

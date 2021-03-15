@@ -2,9 +2,12 @@
 
 Ed25519 benchmarks in C.
 
+Benchmarked libraries:
+
+- `orlp/ed25519`.
+
 ## Built With
 
-- `orlp/ed25519` repository.
 - Using the repository's provided benchmarks.
 
 ## Run Benchmarks

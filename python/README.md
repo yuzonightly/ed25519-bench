@@ -2,6 +2,11 @@
 
 Ed25519 benchmarks in Python.
 
+Benchmarked libraries:
+
+- `warner/python-pure25519`.
+- `pyca/pynacl`.
+
 ## Built With
 
 - `timeit`
