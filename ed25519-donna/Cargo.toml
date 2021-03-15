@@ -1,22 +1,15 @@
 [package]
-name = "rust-sea"
-version = "0.0.0"
-authors = ["yuzonightly <yuzonakai@gmail.com>"]
+name = "ed25519-donna"
+version = "0.1.0"
+authors = ["yuzonightly <marvel.1993@outlook.com>"]
+edition = "2018"
 build = "build.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-# [[bench]]
-# name = "ed25519_orlp_bench"
-# harness = false
-
 [[bench]]
 name = "ed25519_donna_bench"
 harness = false
-
-# [[bench]]
-# name = "ed25519_fun_bench"
-# harness = false
 
 [dependencies]
 libc = "*"

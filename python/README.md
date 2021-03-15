@@ -9,8 +9,8 @@ Ed25519 benchmarks in Python.
 ## Run Benchmarks
 
 ```console
-yuzo@earth:~/python$ python3 -m venv env
-yuzo@earth:~/python$ source env/bin/activate
-yuzo@earth:~/python$ pip install -r requirements.txt
-yuzo@earth:~/python$ python benchmarks.py
+yuzo@earth:~/ed25519-bench/python$ python3 -m venv env
+yuzo@earth:~/ed25519-bench/python$ source env/bin/activate
+yuzo@earth:~/ed25519-bench/python$ pip install -r requirements.txt
+yuzo@earth:~/ed25519-bench/python$ python benchmarks.py
 ```

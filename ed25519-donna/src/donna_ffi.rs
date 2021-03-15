@@ -21,18 +21,6 @@ extern "C" {
     ) -> c_int;
 }
 
-// void
-// ED25519_FN(ed25519_publickey) (const ed25519_secret_key sk, ed25519_public_key pk) {
-// 	bignum256modm a;
-// 	ge25519 ALIGN(16) A;
-// 	hash_512bits extsk;
-
-// 	/* A = aB */
-// 	ed25519_extsk(extsk, sk);
-// 	expand256_modm(a, extsk, 32);
-// 	ge25519_scalarmult_base_niels(&A, ge25519_niels_base_multiples, a);
-// 	ge25519_pack(pk, &A);
-// }
 pub fn ed25519_donna_public_key(secret_key: &[u8; 32], public_key: &mut [u8; 32]) {
     unsafe {
         ed25519_publickey(secret_key.as_ptr(), public_key.as_mut_ptr());

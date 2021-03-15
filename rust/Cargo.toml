@@ -1,0 +1,22 @@
+[package]
+name = "rust"
+version = "0.1.0"
+authors = ["yuzonightly <marvel.1993@outlook.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bench]]
+name = "ed25519_fun_bench"
+harness = false
+
+[dependencies]
+libc = "*"
+criterion = "*"
+ed25519-fun = { git = "https://github.com/yuzonightly/ed25519" }
+itertools = "0.10.0"
+hex = "^0.4"
+
+
+[build-dependencies]
+cc = "*"

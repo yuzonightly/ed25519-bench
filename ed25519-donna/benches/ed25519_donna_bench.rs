@@ -2,9 +2,9 @@
 // With a few modifications.
 
 extern crate criterion;
-extern crate rust_sea;
+extern crate ed25519_donna;
 
-use rust_sea::donna_ffi;
+use ed25519_donna::donna_ffi;
 
 use donna_ffi::ed25519_donna_public_key;
 use donna_ffi::ed25519_donna_sign;

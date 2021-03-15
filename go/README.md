@@ -5,5 +5,5 @@ Ed25519 benchmarks in Go.
 ## Run Benchmarks
 
 ```console
-yuzo@earth:~/go$ go test -bench=.
+yuzo@earth:~/ed25519-bench/go$ go test -bench=.
 ```

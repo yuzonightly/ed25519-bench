@@ -9,6 +9,6 @@ Ed25519 benchmarks in Java.
 ## Run Benchmarks
 
 ```console
-yuzo@earth:~/java$ mvn package
-yuzo@earth:~/java$ java -jar target/ed25519-benchmarks-0.1.0.jar
+yuzo@earth:~/ed25519-bench/java$ mvn package
+yuzo@earth:~/ed25519-bench/java$ java -jar target/ed25519-benchmarks-0.1.0.jar
 ```
