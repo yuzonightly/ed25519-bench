@@ -11,6 +11,7 @@ fn main() {
         .include("/usr/include")
         .include("ed25519-donna")
         .define("ED25519_REFHASH", None)
+        // .flag("-m64")
         .flag("-lssl")
         .flag("-lcrypto")
         .compile("libed25519donna.a");

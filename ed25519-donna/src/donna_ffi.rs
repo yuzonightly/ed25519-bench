@@ -48,7 +48,7 @@ pub fn ed25519_donna_sign(
     signature
 }
 
-pub fn ed25519_donna_sign_open(message: &[u8], public_key: &[u8; 32], signature: &[u8; 64]) -> i32 {
+pub fn ed25519_donna_verify(message: &[u8], public_key: &[u8; 32], signature: &[u8; 64]) -> i32 {
     let message_len: size_t = message.len();
 
     unsafe {

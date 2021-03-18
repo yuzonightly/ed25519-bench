@@ -14,9 +14,9 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 
 @BenchmarkMode(Mode.AverageTime)
-@OutputTimeUnit(TimeUnit.NANOSECONDS)
-@Warmup(iterations = 5000, time = 1, timeUnit = TimeUnit.NANOSECONDS)
-@Measurement(iterations = 50000, time = 2, timeUnit = TimeUnit.NANOSECONDS)
+@OutputTimeUnit(TimeUnit.MICROSECONDS)
+@Warmup(iterations = 50000, time = 1, timeUnit = TimeUnit.MICROSECONDS)
+@Measurement(iterations = 100000, time = 2, timeUnit = TimeUnit.MICROSECONDS)
 @Fork(1)
 @State(Scope.Benchmark)
 

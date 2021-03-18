@@ -8,7 +8,7 @@ use ed25519_donna::donna_ffi;
 
 use donna_ffi::ed25519_donna_public_key;
 use donna_ffi::ed25519_donna_sign;
-use donna_ffi::ed25519_donna_sign_open;
+use donna_ffi::ed25519_donna_verify;
 
 use criterion::{criterion_group, criterion_main, Criterion};
 
@@ -43,7 +43,7 @@ fn bench_ed25519_donna_sign(c: &mut Criterion) {
     });
 }
 
-fn bench_ed25519_donna_sign_open(c: &mut Criterion) {
+fn bench_ed25519_donna_verify(c: &mut Criterion) {
     let signature: [u8; 64] = ed25519_donna_sign(
         &MESSAGE.as_bytes(),
         &ED25519_SECRET_KEY_BYTES,
@@ -51,7 +51,7 @@ fn bench_ed25519_donna_sign_open(c: &mut Criterion) {
     );
     c.bench_function("Ed25519-donna verify", move |b| {
         b.iter(|| {
-            ed25519_donna_sign_open(&MESSAGE.as_bytes(), &ED25519_PUBLIC_KEY_BYTES, &signature)
+            ed25519_donna_verify(&MESSAGE.as_bytes(), &ED25519_PUBLIC_KEY_BYTES, &signature)
         });
     });
 }
@@ -61,7 +61,7 @@ criterion_group! {
     config = Criterion::default();
     targets = bench_ed25519_donna_publickey,
     bench_ed25519_donna_sign,
-    bench_ed25519_donna_sign_open,
+    bench_ed25519_donna_verify,
 }
 
 criterion_main!(ed25519_donna_bench);

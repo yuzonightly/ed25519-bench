@@ -1,7 +1,7 @@
 // Benchmarks from the isislovecruft/dalek-benchmarks repository.
 // With a few modifications.
 
-use libc::{c_uchar, size_t};
+use libc::{c_int, c_uchar, size_t};
 
 #[link(name = "ed25519orlp")]
 extern "C" {
@@ -19,7 +19,7 @@ extern "C" {
         message: *const c_uchar,
         mlen: size_t,
         pk: *const c_uchar,
-    ) -> i32;
+    ) -> c_int;
 }
 
 pub fn ed25519_orlp_seed(seed: &mut [u8; 32]) {
