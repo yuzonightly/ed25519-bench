@@ -4,7 +4,7 @@ Some visualizations reflecting our benchmarks (Intel® Core™ i7-9750H Processo
 
 ## Built With
 
-- `seaborn`.
+- `plotly`.
 
 ## Run Benchmarks
 
@@ -12,5 +12,6 @@ Some visualizations reflecting our benchmarks (Intel® Core™ i7-9750H Processo
 yuzo@earth:~/ed25519-bench/visualizations$ python3 -m venv env
 yuzo@earth:~/ed25519-bench/visualizations$ source env/bin/activate
 yuzo@earth:~/ed25519-bench/visualizations$ pip install -r requirements.txt
-yuzo@earth:~/ed25519-bench/visualizations$ python visual.py
+yuzo@earth:~/ed25519-bench/visualizations$ python3 overall.py
+yuzo@earth:~/ed25519-bench/visualizations$ python3 architecture.py
 ```
