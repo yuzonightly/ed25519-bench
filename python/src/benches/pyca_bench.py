@@ -5,7 +5,7 @@
 import timeit
 
 
-class Pure25519Bench:
+class PycaBench:
 
     def __init__(self):
         pass
@@ -40,13 +40,14 @@ class Pure25519Bench:
                                  " ".join([self.abbrev(s) for s in t])))
 
     def bench(self):
-        S1 = "from pure25519 import ed25519_oop"
-        S2 = "msg=b' '"
-        S3 = "sk, vk = ed25519_oop.create_keypair()"
-        S4 = "sig = sk.sign(msg)"
-        S5 = "vk.verify(sig, msg)"
+        S1 = "from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey"
+        S2 = "msg=b''"
+        S3 = "private_key = Ed25519PrivateKey.generate()"
+        S4 = "signature = private_key.sign(msg)"
+        S5 = "public_key = private_key.public_key()"
+        S6 = "public_key.verify(signature, msg)"
 
-        print("pure25519 benchmarks (in seconds)")
+        print("pyca benchmarks (in seconds)")
         self.p("Keypair generation", [S1, S2], S3)
         self.p("Signature generation", [S1, S2, S3], S4)
-        self.p("Signature verification", [S1, S2, S3, S4], S5)
+        self.p("Signature verification", [S1, S2, S3, S4, S5], S6)

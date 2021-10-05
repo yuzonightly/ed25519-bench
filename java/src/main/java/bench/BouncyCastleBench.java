@@ -15,7 +15,7 @@ import org.openjdk.jmh.annotations.*;
 
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
-@Warmup(iterations = 50000, time = 1, timeUnit = TimeUnit.MICROSECONDS)
+@Warmup(iterations = 100000, time = 1, timeUnit = TimeUnit.MICROSECONDS)
 @Measurement(iterations = 100000, time = 2, timeUnit = TimeUnit.MICROSECONDS)
 @Fork(1)
 @State(Scope.Benchmark)
@@ -37,7 +37,7 @@ public class BouncyCastleBench {
         this.sk = keyPair.getPrivate();
         this.pk = keyPair.getPublic();
 
-        this.message = new byte[64];
+        this.message = new byte[0];
         r.nextBytes(this.message);
 
         Signer signer = new Ed25519Signer();

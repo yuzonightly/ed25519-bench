@@ -37,7 +37,7 @@ public class Str4dBench {
         this.sk = keyPair.getPrivate();
         this.pk = keyPair.getPublic();
 
-        this.message = new byte[64];
+        this.message = new byte[0];
         r.nextBytes(this.message);
 
         EdDSAEngine signer = new EdDSAEngine();

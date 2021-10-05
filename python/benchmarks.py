@@ -1,9 +1,9 @@
-from src.benches.pure25519_bench import Pure25519Bench
+from src.benches.pyca_bench import PycaBench
 from src.benches.pynacl_bench import PyNaClBench
 
 
 def main():
-    Pure25519Bench().bench()
+    PycaBench.().bench()
     PyNaClBench().bench()
 
 

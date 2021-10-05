@@ -14,7 +14,7 @@ harness = false
 [dependencies]
 libc = "*"
 criterion = "*"
-ed25519-fun = { git = "https://github.com/yuzonightly/ed25519" }
+ed25519-fun = { git = "https://github.com/yuzonightly/ed25519-fun" }
 itertools = "0.10.0"
 hex = "^0.4"
 

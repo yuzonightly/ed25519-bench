@@ -1,0 +1,10 @@
+# ed25519-orlp --
+# gcc -m64 -O3 ed25519/src/*.c -c -lssl -lcrypto
+# gcc -m64 -O3 MAIN.c *.o -lssl -lcrypto -o MAIN.out
+# ed25519-donna --
+# 64-bit:
+# gcc ed25519.c -O3 -c -DDED25519_SSE2=none
+# gcc -O3 MAIN.c ./*.o -o donna.out -lssl -lcrypto -DDED25519_SSE2=none
+# 32-bit:
+# gcc ed25519.c -m32 -O3 -c -DED25519_FORCE_32BIT -DDED25519_SSE2=none
+# gcc -m32 -O3 bench.c ./*.o -o donna.out -lssl -lcrypto -DDED25519_SSE2=none
