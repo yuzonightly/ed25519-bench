@@ -4,7 +4,7 @@ Ed25519 benchmarks in Rust.
 
 Benchmarked libraries:
 
-- `yuzonightly/ed25519-fun`.
+- `yuzonightly/ed25519-fun`
 
 ## Built With
 
@@ -12,6 +12,6 @@ Benchmarked libraries:
 
 ## Run Benchmarks
 
-```console
-yuzo@earth:~/ed25519-bench/rust$ cargo bench
+```bash
+cargo bench
 ```

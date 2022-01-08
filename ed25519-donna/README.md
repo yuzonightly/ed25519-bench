@@ -4,7 +4,7 @@ Ed25519 benchmarks using Rust's FFI, considering that the overhead introduced is
 
 Benchmarked libraries:
 
-- `floodyberry/ed25519-donna`.
+- `floodyberry/ed25519-donna`
 
 ## Built With
 
@@ -14,6 +14,6 @@ Benchmarked libraries:
 
 ## Run Benchmarks
 
-```console
-yuzo@earth:~/ed25519-bench/ed25519-donna$ cargo bench
+```bash
+cargo bench
 ```

@@ -4,7 +4,7 @@ Ed25519 benchmarks using Rust's FFI, considering that the overhead introduced is
 
 Benchmarked libraries:
 
-- `orlp/ed25519`.
+- `orlp/ed25519`
 
 ## Built With
 
@@ -14,6 +14,6 @@ Benchmarked libraries:
 
 ## Run Benchmarks
 
-```console
-yuzo@earth:~/ed25519-bench/ed25519-orlp$ cargo bench
+```bash
+cargo bench
 ```

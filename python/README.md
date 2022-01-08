@@ -4,8 +4,8 @@ Ed25519 benchmarks in Python.
 
 Benchmarked libraries:
 
-- `warner/python-pure25519`.
-- `pyca/pynacl`.
+- `warner/python-pure25519`
+- `pyca/pynacl`
 
 ## Built With
 
@@ -13,9 +13,9 @@ Benchmarked libraries:
 
 ## Run Benchmarks
 
-```console
-yuzo@earth:~/ed25519-bench/python$ python3 -m venv env
-yuzo@earth:~/ed25519-bench/python$ source env/bin/activate
-yuzo@earth:~/ed25519-bench/python$ pip install -r requirements.txt
-yuzo@earth:~/ed25519-bench/python$ python benchmarks.py
+```bash
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+python benchmarks.py
 ```
